@@ -19,8 +19,8 @@ class required implements ValidatorInterface
     public function validate(BaseObject $BaseObject, array $attributes, array $options = []): void
     {
         foreach ($attributes as $attribute) {
-            if (trim((string)$BaseObject->$attribute) === '') {
-                $BaseObject->addError($attribute, $attribute . ' cannot be empty');
+            if (trim((string) $BaseObject->$attribute) === '') {
+                $BaseObject->addError($attribute, $attribute.' cannot be empty');
             }
         }
     }

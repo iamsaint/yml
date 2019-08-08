@@ -21,7 +21,7 @@ class one_of implements ValidatorInterface
     {
         foreach ($attributes as $attribute) {
             if (!in_array($BaseObject->$attribute, $options, true)) {
-                $BaseObject->addError($attribute, $attribute . ' must be element of [' . implode(', ', $options) . ']');
+                $BaseObject->addError($attribute, $attribute.' must be element of ['.implode(', ', $options).']');
             }
         }
     }

@@ -20,7 +20,7 @@ class url implements ValidatorInterface
     {
         foreach ($attributes as $attribute) {
             if (!filter_var($BaseObject->$attribute, FILTER_VALIDATE_URL)) {
-                $BaseObject->addError($attribute, $attribute . ' must be valid url');
+                $BaseObject->addError($attribute, $attribute.' must be valid url');
             }
         }
     }
